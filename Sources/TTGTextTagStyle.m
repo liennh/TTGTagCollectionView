@@ -33,6 +33,7 @@
     if (copy != nil) {
         copy.backgroundColor = self.backgroundColor;
         copy.textAlignment = self.textAlignment;
+        copy.textColor = self.textColor;
         copy.enableGradientBackground = self.enableGradientBackground;
         copy.gradientBackgroundStartColor = self.gradientBackgroundStartColor;
         copy.gradientBackgroundEndColor = self.gradientBackgroundEndColor;
@@ -63,6 +64,10 @@
 
 - (UIColor *)backgroundColor {
     return _backgroundColor ?: [UIColor clearColor];
+}
+
+- (UIColor *)textColor {
+    return _textColor ?: [UIColor blackColor];
 }
 
 - (UIColor *)gradientBackgroundStartColor {
